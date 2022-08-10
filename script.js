@@ -1,4 +1,5 @@
 const computerSelection = getComputerChoice();
+const playerSelection = "rock";
 
 function getComputerChoice() {
    let randomChoiceValue = Math.floor(Math.random() * 3);
@@ -9,6 +10,6 @@ function getComputerChoice() {
         return "Paper";
    }
    else {
-        return "Scissors;"
+        return "Scissors";
    }
 }
