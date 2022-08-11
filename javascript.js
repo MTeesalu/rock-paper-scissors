@@ -1,41 +1,42 @@
 const computerSelection = getComputerChoice();
-const playerSelection = "Rock";
+let playerSelection = "rock";
 
 function getComputerChoice() {
      let randomChoiceValue = Math.floor(Math.random() * 3);
      if (randomChoiceValue == "0") {
-          return "Rock";
+          return "rock";
      } else if (randomChoiceValue == "1") {
-          return "Paper";
+          return "paper";
      } else {
-          return "Scissors";
+          return "scissors";
      }
 }
 
 function playRound(playerSelection, computerSelection) {
      let log = '';
+     playerSelection = playerSelection.toLowerCase();
 
-     if (playerSelection === 'Rock') {
-          if (computerSelection === 'Paper') {
-               log = 'You Lose! Paper beats Rock';
-          } else if (computerSelection === 'Scissors') {
-               log = 'You Win! Rock beats Scissors';
+     if (playerSelection === 'rock') {
+          if (computerSelection === 'paper') {
+               log = 'You Lose! Paper beats rock';
+          } else if (computerSelection === 'scissors') {
+               log = 'You Win! Rock beats scissors';
           } else {
                log = "It's a tie";
           }
-     } else if (playerSelection === 'Paper') {
-          if (computerSelection === 'Scissors') {
-               log = 'You Lose! Scissors beats Paper';
-          } else if (computerSelection === 'Rock') {
-               log = 'You Win! Paper beats Rock';
+     } else if (playerSelection === 'paper') {
+          if (computerSelection === 'scissors') {
+               log = 'You Lose! Scissors beats paper';
+          } else if (computerSelection === 'rock') {
+               log = 'You Win! Paper beats rock';
           } else {
                log = "It's a tie";
           }
-     } else if (playerSelection === 'Scissors') {
-          if (computerSelection === 'Rock') {
-               log = 'You Lose! Rock beats Scissors';
-          } else if (computerSelection === 'Paper') {
-               log = 'You Win! Scissors beats Paper';
+     } else if (playerSelection === 'scissors') {
+          if (computerSelection === 'rock') {
+               log = 'You Lose! Rock beats scissors';
+          } else if (computerSelection === 'paper') {
+               log = 'You Win! Scissors beats paper';
           } else {
                log = "It's a tie";
           } 
