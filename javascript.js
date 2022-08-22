@@ -1,5 +1,5 @@
-let playerScore = 0
-let computerScore = 0
+let playerScore = 0;
+let computerScore = 0;
 
 function getComputerChoice() {
      let randomChoiceValue = Math.floor(Math.random() * 3);
@@ -18,24 +18,30 @@ function playRound(playerSelection, computerSelection) {
      if (playerSelection === 'rock') {
           if (computerSelection === 'paper') {
                log = 'You Lose! Paper beats rock';
+               computerScore++;
           } else if (computerSelection === 'scissors') {
-               log = 'You Win! Rock beats scissors';              
+               log = 'You Win! Rock beats scissors';
+               playerScore++;              
           } else {
                log = "It's a tie";
           }
      } else if (playerSelection === 'paper') {
           if (computerSelection === 'scissors') {
-               log = 'You Lose! Scissors beats paper';              
+               log = 'You Lose! Scissors beats paper';
+               computerScore++;              
           } else if (computerSelection === 'rock') {
-               log = 'You Win! Paper beats rock';     
+               log = 'You Win! Paper beats rock';
+               playerScore++;     
           } else {
                log = "It's a tie";
           }
      } else if (playerSelection === 'scissors') {
           if (computerSelection === 'rock') {
-               log = 'You Lose! Rock beats scissors';     
+               log = 'You Lose! Rock beats scissors';
+               computerScore++;     
           } else if (computerSelection === 'paper') {
-               log = 'You Win! Scissors beats paper';    
+               log = 'You Win! Scissors beats paper';
+               playerScore++;    
           } else {
                log = "It's a tie";
           } 
@@ -43,19 +49,13 @@ function playRound(playerSelection, computerSelection) {
      return log;
 }
 
-function game() {
-     for (let i = 0; i < 5; i++) {
+for (let i = 0; i < 5; i++) {
+     function game() {
           let playerSelection = prompt('Enter your choice');
           let computerSelection = getComputerChoice();
-          let roundOutcome = playRound(playerSelection, computerSelection);
-          playRound(playerSelection, computerSelection);
-          if (roundOutcome === 'You Lose! Paper beats rock',
-          'You Lose! Scissors beats paper', 'You Lose! Rock beats scissors') {
-               computerScore++;
-          } else if (roundOutcome === 'You Win! Rock beats scissors', 
-          'You Win! Paper beats rock', 'You Win! Scissors beats paper') {
-               playerScore++;
-          }
+          let roundOutcome = playRound(playerSelection, computerSelection);          
+          console.log("Your score = " + playerScore);
+          console.log("Computer's score = " + computerScore);
           return roundOutcome;
      }
 }
