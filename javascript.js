@@ -1,5 +1,3 @@
-let playerSelection = prompt('Enter your choice');
-let computerSelection = getComputerChoice();
 let playerScore = 0
 let computerScore = 0
 
@@ -20,30 +18,24 @@ function playRound(playerSelection, computerSelection) {
      if (playerSelection === 'rock') {
           if (computerSelection === 'paper') {
                log = 'You Lose! Paper beats rock';
-               computerScore++;
           } else if (computerSelection === 'scissors') {
-               log = 'You Win! Rock beats scissors';
-               playerScore++;
+               log = 'You Win! Rock beats scissors';              
           } else {
                log = "It's a tie";
           }
      } else if (playerSelection === 'paper') {
           if (computerSelection === 'scissors') {
-               log = 'You Lose! Scissors beats paper';
-               computerScore++;
+               log = 'You Lose! Scissors beats paper';              
           } else if (computerSelection === 'rock') {
-               log = 'You Win! Paper beats rock';
-               playerScore++;
+               log = 'You Win! Paper beats rock';     
           } else {
                log = "It's a tie";
           }
      } else if (playerSelection === 'scissors') {
           if (computerSelection === 'rock') {
-               log = 'You Lose! Rock beats scissors';
-               computerScore++;
+               log = 'You Lose! Rock beats scissors';     
           } else if (computerSelection === 'paper') {
-               log = 'You Win! Scissors beats paper';
-               playerScore++;
+               log = 'You Win! Scissors beats paper';    
           } else {
                log = "It's a tie";
           } 
@@ -52,9 +44,18 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-     let outcome = playRound(playerSelection, computerSelection);
-     playerSelection = prompt('Enter your choice');
-     computerSelection = getComputerChoice();
-     playRound(playerSelection, computerSelection);
-     return outcome;
+     for (let i = 0; i < 5; i++) {
+          let playerSelection = prompt('Enter your choice');
+          let computerSelection = getComputerChoice();
+          let roundOutcome = playRound(playerSelection, computerSelection);
+          playRound(playerSelection, computerSelection);
+          if (roundOutcome === 'You Lose! Paper beats rock',
+          'You Lose! Scissors beats paper', 'You Lose! Rock beats scissors') {
+               computerScore++;
+          } else if (roundOutcome === 'You Win! Rock beats scissors', 
+          'You Win! Paper beats rock', 'You Win! Scissors beats paper') {
+               playerScore++;
+          }
+          return roundOutcome;
+     }
 }
