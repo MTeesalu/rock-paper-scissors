@@ -56,6 +56,11 @@ for (let i = 0; i < 5; i++) {
           let roundOutcome = playRound(playerSelection, computerSelection);          
           console.log("Your score = " + playerScore);
           console.log("Computer's score = " + computerScore);
-          return roundOutcome;
+          console.log(roundOutcome);
+     }
+     if (i !== 5 ) {
+          game();
+     } else if (i == 5) {
+          alert("Game Over");
      }
 }
