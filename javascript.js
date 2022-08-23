@@ -60,7 +60,13 @@ for (let i = 0; i < 5; i++) {
      }
      if (i !== 5 ) {
           game();
-     } else if (i == 5) {
-          alert("Game Over");
-     }
+     }     
+}
+
+if (playerScore > computerScore) {
+    alert('Good job! You won the game! Reload the page to play again :)');
+} else if (playerScore < computerScore) {
+     alert('You lost! Better luck next time! Reload the page to play again :)');
+} else {
+     alert("Unlucky! It's a tie! Reload the page to play again :)");
 }
