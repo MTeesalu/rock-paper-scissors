@@ -58,15 +58,30 @@ for (let i = 0; i < 5; i++) {
           console.log("Computer's score = " + computerScore);
           console.log(roundOutcome);
      }
+     if (i == 1) {
+          console.log('%c Round 1 Over', 'color: pink');
+     }
+     if (i == 2) {
+          console.log('%c Round 2 Over', 'color: pink');
+     }
+     if (i == 3) {
+          console.log('%c Round 3 Over', 'color: pink');
+     }
+     if (i == 4) {
+          console.log('%c Round 4 Over', 'color: pink');
+     }
+     
      if (i !== 5 ) {
           game();
      }     
-}
-
+}    
 if (playerScore > computerScore) {
-    alert('Good job! You won the game! Reload the page to play again :)');
+     console.log('%c Game Over! You won!', 'color: green');
+     alert('Good job! You won the game! Reload the page to play again :)');
 } else if (playerScore < computerScore) {
+     console.log('%c Game Over! You lost!', 'color: red');
      alert('You lost! Better luck next time! Reload the page to play again :)');
 } else {
+     console.log('%c Game Over! Tie!', 'color: yellow');
      alert("Unlucky! It's a tie! Reload the page to play again :)");
-}
+     }
