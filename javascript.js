@@ -51,7 +51,7 @@ function playRound(playerSelection, computerSelection) {
 
 for (let i = 0; i < 5; i++) {
      function game() {
-          let playerSelection = prompt('Enter your choice');
+          let playerSelection = prompt('Enter rock, paper or scissors :)');
           let computerSelection = getComputerChoice();
           let roundOutcome = playRound(playerSelection, computerSelection);          
           console.log("Your score = " + playerScore);
@@ -74,7 +74,8 @@ for (let i = 0; i < 5; i++) {
      if (i !== 5 ) {
           game();
      }     
-}    
+}
+
 if (playerScore > computerScore) {
      console.log('%c Game Over! You won!', 'color: green');
      alert('Good job! You won the game! Reload the page to play again :)');
