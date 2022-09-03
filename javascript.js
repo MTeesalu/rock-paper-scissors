@@ -66,6 +66,7 @@ function playGame() {
      console.log("Your score = " + playerScore);
      console.log("Computer's score = " + computerScore);
      console.log(roundOutcome);
-     }     
-
+     player.textContent = `Player Score: ${playerScore}`;
+     computer.textContent = `Computer Score: ${computerScore}`;
+     }    
 
