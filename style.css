@@ -1,0 +1,52 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    background-color: rgb(194, 201, 214);
+}
+
+.btn {
+    margin-top: 20px;
+    width: 100px;
+    height: 100px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+    border-color:darkcyan;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+#output {
+    margin-top: 40px;
+}
+
+#main-header {
+    font-size: 60px;
+}
+
+#secondary-header {
+    font-size: 28px;
+}
+
+.text {
+    font-size: 20px;
+}
+
+#player {
+    font-weight: 700;
+}
+
+#computer {
+    font-weight: 700;
+}

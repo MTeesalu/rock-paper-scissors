@@ -63,10 +63,21 @@ function playRound(playerSelection, computerSelection) {
 function playGame() {
      let computerSelection = getComputerChoice();
      let roundOutcome = playRound(playerSelection, computerSelection);          
-     console.log("Your score = " + playerScore);
-     console.log("Computer's score = " + computerScore);
-     console.log(roundOutcome);
+     output.textContent = roundOutcome;
      player.textContent = `Player Score: ${playerScore}`;
      computer.textContent = `Computer Score: ${computerScore}`;
-     }    
+     if (playerScore == 5) {
+          output.textContent = 'Nice! You Won the Game!';
+          playerScore = 0;
+          computerScore = 0;
+          player.textContent = `Player Score: ${playerScore}`;
+          computer.textContent = `Computer Score: ${computerScore}`;
+     } else if (computerScore == 5) {
+          output.textContent = 'You Lost the Game! Better luck next time!';
+          playerScore = 0;
+          computerScore = 0;
+          player.textContent = `Player Score: ${playerScore}`;
+          computer.textContent = `Computer Score: ${computerScore}`;
+     }
+}    
 
