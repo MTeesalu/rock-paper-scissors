@@ -65,11 +65,15 @@ function playRound(playerSelection, computerSelection) {
 function playGame() {
      let computerSelection = getComputerChoice();
      let roundOutcome = playRound(playerSelection, computerSelection);          
-     output.textContent = roundOutcome;
+     outputText.textContent = roundOutcome;
+     outputText.style.fontSize = '20px';
+     outputText.style.color = 'black';
      player.textContent = `Player Score: ${playerScore}`;
      computer.textContent = `Computer Score: ${computerScore}`;
      if (playerScore == 5) {
-          output.textContent = 'Nice! You Won the Game!';
+          outputText.textContent = 'Nice! You Won the Game!';
+          outputText.style.fontSize = '30px';
+          outputText.style.color = 'green';
           gamesWonPlayer++;
           gamesWonLeft.textContent = `${gamesWonPlayer}`;
           playerScore = 0;
@@ -77,7 +81,9 @@ function playGame() {
           player.textContent = `Player Score: ${playerScore}`;
           computer.textContent = `Computer Score: ${computerScore}`;
      } else if (computerScore == 5) {
-          output.textContent = 'You Lost the Game! Better luck next time!';
+          outputText.textContent = 'You Lost the Game!';
+          outputText.style.fontSize = '30px';
+          outputText.style.color = 'rgb(95, 15, 0)';
           gamesWonComputer++;
           gamesWonRight.textContent = `${gamesWonComputer}`;
           playerScore = 0;

@@ -6,27 +6,31 @@
     <title>RockPaperScissors</title>
 </head>
 <body>
-    <h1 id="main-header">Rock Paper Scissors</h1>
-    <h3 id="secondary-header">First to score 5 points wins the game!</h3>
-    <div class="scoreboard">
-        <div class="scoreboard-left">
-            <p class="text" id="player">Player Score:</p>
+    <div class="page-left">
+        <div id="gamesWonLeft">0</div>
+    </div>
+    <div class="page-center">
+        <h1 id="main-header">Rock Paper Scissors</h1>
+        <h3 id="secondary-header">First to score 5 points wins the game!</h3>
+        <div class="scoreboard">
+            <div class="scoreboard-left">
+                <p class="text" id="player">Player Score:</p>
+            </div>
+            <div class="scoreboard-right">
+                <p class="text" id="computer">Computer Score:</p>           
+            </div>
         </div>
-        <div class="scoreboard-right">
-            <p class="text" id="computer">Computer Score:</p>           
+        <div class="output">
+            <p class="text" id="outputText">Choose Rock, Paper or Scissors</p>
+        </div>
+        <div class="buttons">
+            <button class="btn" id="rock">Rock</button>
+            <button class="btn" id="paper">Paper</button>
+            <button class="btn" id="scissors">Scissors</button>
         </div>
     </div>
-    <div>
-        <p class="text" id="output">Choose Rock, Paper or Scissors</p>
-    </div>
-    <div class="buttons">
-        <button class="btn" id="rock">Rock</button>
-        <button class="btn" id="paper">Paper</button>
-        <button class="btn" id="scissors">Scissors</button>
-    </div>
-    <div class="gamesWon">
-        <div id="gamesWonLeft"></div>
-        <div id="gamesWonRight"></div>
+    <div class="page-right">
+        <div id="gamesWonRight">0</div>
     </div>
     <script src="javascript.js"></script>
 </body>
