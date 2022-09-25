@@ -1,5 +1,7 @@
 let playerScore = 0;
 let computerScore = 0;
+let gamesWonPlayer = 0;
+let gamesWonComputer = 0;
 
 let playerSelection;
 
@@ -68,19 +70,19 @@ function playGame() {
      computer.textContent = `Computer Score: ${computerScore}`;
      if (playerScore == 5) {
           output.textContent = 'Nice! You Won the Game!';
+          gamesWonPlayer++;
+          gamesWonLeft.textContent = `${gamesWonPlayer}`;
           playerScore = 0;
           computerScore = 0;
           player.textContent = `Player Score: ${playerScore}`;
           computer.textContent = `Computer Score: ${computerScore}`;
      } else if (computerScore == 5) {
           output.textContent = 'You Lost the Game! Better luck next time!';
+          gamesWonComputer++;
+          gamesWonRight.textContent = `${gamesWonComputer}`;
           playerScore = 0;
           computerScore = 0;
           player.textContent = `Player Score: ${playerScore}`;
           computer.textContent = `Computer Score: ${computerScore}`;
      }
 }    
-
-function gamesWonCounter {
-
-}
