@@ -81,3 +81,6 @@ function playGame() {
      }
 }    
 
+function gamesWonCounter {
+
+}
