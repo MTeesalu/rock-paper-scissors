@@ -114,9 +114,28 @@ body {
 }
 
 #gamesWonLeft {
-    font-size: 500px;
+    font-size: 400px;
 }
 
 #gamesWonRight {
-    font-size: 500px;
+    font-size: 400px;
+}
+
+.refresh-button {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-left: 180px;
+    margin-right: 180px;
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+.refresh-button:hover {
+    transform: scale(1.2);
+    border-color:darkcyan;
 }
