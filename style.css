@@ -49,6 +49,18 @@ body {
     border-style: solid;
 }
 
+#rock:active {
+    transform: translateY(2px);
+}
+
+#paper:active {
+    transform: translateY(2px);
+}
+
+#scissors:active {
+    transform: translateY(2px);
+}
+
 #paper {
     border-color: black;
     border-style: dotted;
@@ -61,7 +73,7 @@ body {
 }
 
 .btn:hover {
-    transform: scale(1.4);
+    transform: scale(1.2);
 }
 
 .scoreboard {
