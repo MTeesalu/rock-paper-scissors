@@ -67,7 +67,7 @@ function playGame() {
      let roundOutcome = playRound(playerSelection, computerSelection);          
      outputText.textContent = roundOutcome;
      outputText.style.fontSize = '20px';
-     outputText.style.color = '#B049CA';
+     outputText.style.color = '#C52982';
      player.textContent = `Player Score: ${playerScore}`;
      computer.textContent = `Computer Score: ${computerScore}`;
      if (playerScore == 5) {
